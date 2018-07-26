@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ClickAndGetInfo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Suf-ix-7Qz">
+                                <rect key="frame" x="0.0" y="220" width="375" height="397"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="ajs-Nq-b3u"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="huf-kY-S41"/>
+                                </connections>
+                            </tableView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GdJ-eO-tzm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="KFV-Wn-o78"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pRN-rf-Obw">
+                                <rect key="frame" x="16" y="629" width="54" height="26"/>
+                                <state key="normal" title="Camera"/>
+                                <connections>
+                                    <action selector="action:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GqA-lL-lUx"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="GdJ-eO-tzm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1zA-ru-AGr"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Suf-ix-7Qz" secondAttribute="trailing" id="7hM-Rr-N1F"/>
+                            <constraint firstItem="Suf-ix-7Qz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="200" id="BHf-cL-MWl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="GdJ-eO-tzm" secondAttribute="trailing" id="CcH-TS-ohq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="pRN-rf-Obw" secondAttribute="bottom" constant="12" id="ZHg-3z-SFj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Suf-ix-7Qz" secondAttribute="bottom" constant="50" id="jSy-72-xh1"/>
+                            <constraint firstItem="Suf-ix-7Qz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="mbK-zS-pSe"/>
+                            <constraint firstItem="Suf-ix-7Qz" firstAttribute="top" secondItem="GdJ-eO-tzm" secondAttribute="bottom" id="poi-f1-140"/>
+                            <constraint firstItem="pRN-rf-Obw" firstAttribute="top" secondItem="Suf-ix-7Qz" secondAttribute="bottom" constant="12" id="sPy-4f-3g1"/>
+                            <constraint firstItem="GdJ-eO-tzm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="vO2-wi-Bmv"/>
+                            <constraint firstItem="pRN-rf-Obw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="wRU-gX-b4Y"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="GdJ-eO-tzm" id="ncj-a9-TAb"/>
+                        <outlet property="tableView" destination="Suf-ix-7Qz" id="0qM-8e-NAw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-79.200000000000003" y="133.5832083958021"/>
+        </scene>
+    </scenes>
+</document>
